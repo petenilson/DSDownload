@@ -119,7 +119,7 @@ class DownloadThread(threading.Thread):
         file_size = meta.get("Content-Length")
         logging.debug('File size:' + str(file_size))
 
-        print(color + "Downloading: %s Bytes: %s" % (file_name, file_size) + self.color_reset)
+        logging.info("Downloading: %s Bytes: %s" % (file_name, file_size))
 
         file_size = 0
         block_size = 8192
