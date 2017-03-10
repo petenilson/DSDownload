@@ -8,7 +8,7 @@ setup(
     author='Diego Siqueira',
     author_email='dieg0@live.com',
     license='MIT',
-    package_dir={'DSDownload': 'src'},
+    package_dir={'DSDownload': 'DSDownload'},
     packages=['DSDownload'],
     zip_safe=False,
     keywords=['download', 'thread', 'speed', 'resume', 'multi', 'simple'],

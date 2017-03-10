@@ -10,6 +10,7 @@ import os
 import logging
 import queue as Queue
 import urllib2
+from urlparse import urlparse
 
 
 class DownloadThread(threading.Thread):
@@ -87,7 +88,7 @@ class DownloadThread(threading.Thread):
                 return con_name
 
         logging.debug('Spliting URL for filename')
-        file_name = url.split('/')[-1]
+        file_name = os.path.basename(urlparse(url).path)
         logging.debug('Filename: ' + file_name)
 
         return file_name
